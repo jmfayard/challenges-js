@@ -1,13 +1,3 @@
-fun main() {
-    val cases = listOf(
-        "(([{}][]))",
-        "(()))"
-    )
-    cases.forEach {
-        println("input=$it isValid=${isValid(it)}")
-    }
-}
-
 fun isValid(input: String): Boolean {
     val stack = Stack(input, mutableListOf())
     input.forEachIndexed { index, c ->
